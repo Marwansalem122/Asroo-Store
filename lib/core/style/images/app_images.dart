@@ -5,5 +5,6 @@ class AppImages {
   static const String imagePath = 'assets/images/core';
   static const String svgPath = 'assets/svgs';
   static const String noNetwork = '$imagePath/no_network$jpgFormate';
+  static const String pageUnderBuild = '$imagePath/page_under_build$jpgFormate';
   
 }

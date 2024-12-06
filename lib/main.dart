@@ -1,5 +1,6 @@
 import 'package:asroo_store/asroo_store_app.dart';
 import 'package:asroo_store/core/app/env.variables.dart';
+import 'package:asroo_store/core/routes/app_router.dart';
 import 'package:asroo_store/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,7 @@ void main() async {
   await SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp],
       ).then((_) {
-       runApp(const AsrooStoreApp());
+       runApp( AsrooStoreApp(appRouter: AppRouter(),));
       });
   
 }
