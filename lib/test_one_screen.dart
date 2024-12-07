@@ -1,4 +1,5 @@
-import 'package:asroo_store/core/helper/navigation_extension.dart';
+import 'package:asroo_store/core/helper/extensions/context_extension.dart';
+import 'package:asroo_store/core/language/lang_keys.dart';
 import 'package:asroo_store/core/routes/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,11 @@ class TestOneScreen extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            const Text('This is Test One Screen'),
+            Text('This is Test One Screen',
+                style: TextStyle(color: context.color.bluePinkDark)),
+            Text(context.translate(LangKeys.email),
+                style: TextStyle(color: context.color.bluePinkDark)),
+            Image.asset(context.assets.bigNavBar ?? ""),
             TextButton(
                 onPressed: () {
                   context.pushNamed(Routes.testTwoScreen);
