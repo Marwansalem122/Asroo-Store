@@ -34,6 +34,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_dotenv: ^5.2.1
+  flutter_localization: ^0.2.3
   flutter_native_splash: ^2.4.3
   flutter_screenutil: ^5.9.3
 
@@ -65,6 +66,9 @@ flutter:
     - .env.dev
     - .env.prod
     - assets/images/core/
+    - lang/ar.json
+    - lang/en.json
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
   # For details regarding adding assets from package dependencies, see
@@ -92,6 +96,5 @@ flutter:
           weight: 500
         - asset: assets/fonts/english/poppins/Poppins-Regular.ttf
           weight: 400
-  #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
