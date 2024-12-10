@@ -36,11 +36,11 @@ class MyAssets extends ThemeExtension<MyAssets> {
   }
 
   static const MyAssets dark = MyAssets(
-    bigNavBar: AppImages.darkTestImage,
-    homeBg: AppImages.darkTestImage,
+    bigNavBar: AppImages.bigIconNavBarDark,
+    homeBg: AppImages.homeBgDark,
   );
   static const MyAssets light = MyAssets(
-    bigNavBar: AppImages.lightTestImage,
-    homeBg: AppImages.lightTestImage,
+    bigNavBar: AppImages.bigIconNavBarLight,
+    homeBg: AppImages.homeBgLight,
   );
 }
