@@ -10,13 +10,13 @@ import 'package:flutter/material.dart';
 ThemeData themeDark() {
   return ThemeData(
     scaffoldBackgroundColor: DarkColors.mainColor,
-    extensions:  <ThemeExtension<dynamic>>[MyColors.dark, MyAssets.dark],
+    extensions: const <ThemeExtension<dynamic>>[MyColors.dark, MyAssets.dark],
     useMaterial3: true,
-    textTheme:const TextTheme(
+    textTheme: TextTheme(
       displaySmall: TextStyle(
         fontSize: 14,
         color: DarkColors.white,
-       // fontFamily: FontFamilyHelper.geLocalozedFontFamily(),
+       fontFamily: FontFamilyHelper.geLocalozedFontFamily(),
       ),
     ),
   );
@@ -25,13 +25,13 @@ ThemeData themeDark() {
 ThemeData themeLight() {
   return ThemeData(
     scaffoldBackgroundColor: LightColors.mainColor,
-    extensions:  <ThemeExtension<dynamic>>[MyColors.light,MyAssets.light],
+    extensions:const  <ThemeExtension<dynamic>>[MyColors.light,MyAssets.light],
     useMaterial3: true,
-    textTheme: const TextTheme(
+    textTheme:  TextTheme(
       displaySmall: TextStyle(
         fontSize: 14,
         color: LightColors.black,
-       // fontFamily: FontFamilyHelper.geLocalozedFontFamily(),
+        fontFamily: FontFamilyHelper.geLocalozedFontFamily(),
       ),
     ),
   );

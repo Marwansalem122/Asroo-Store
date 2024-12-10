@@ -1,19 +1,20 @@
+import 'package:asroo_store/core/common/screens/under_build_screen.dart';
 import 'package:asroo_store/core/routes/base_routes.dart';
 import 'package:asroo_store/core/routes/routes.dart';
-import 'package:asroo_store/core/common/screens/under_build_screen.dart';
-import 'package:asroo_store/test_one_screen.dart';
-import 'package:asroo_store/test_two_screen.dart';
+import 'package:asroo_store/features/auth/presentation/screens/login_screen.dart';
+import 'package:asroo_store/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
+  // ignore: strict_raw_type
   Route generateRoute(RouteSettings settings) {
     //  this arguments to be passed in any screen  like this (arguments & className)
     final argument = settings.arguments;
     switch (settings.name) {
-      case Routes.testOneScreen:
-        return BaseRoute(page: const TestOneScreen());
-         case Routes.testTwoScreen:
-   return BaseRoute(page: const TestTwoScreen());
+      case Routes.loginScreen:
+        return BaseRoute(page: const LoginScreen());
+        case Routes.signupScreen:
+  return BaseRoute(page: const SignUpScreen());
       default:
         return BaseRoute(page: const PageUnderBuildScreen());
     }

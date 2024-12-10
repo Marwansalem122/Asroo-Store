@@ -17,6 +17,8 @@ extension ContextExt on BuildContext {
     return Navigator.of(this).pushNamed(routeName, arguments: arguments);
   }
 
+// style
+  TextStyle get textStyle => Theme.of(this).textTheme.displaySmall!;
   Future<dynamic> pushReplacementNamed(String routeName, {Object? arguments}) {
     return Navigator.of(this)
         .pushReplacementNamed(routeName, arguments: arguments);
