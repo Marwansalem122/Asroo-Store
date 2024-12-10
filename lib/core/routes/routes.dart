@@ -1,6 +1,6 @@
 
 class Routes{
-static const String testOneScreen='/testOneScreen';
-static const String testTwoScreen='/testTwoScreen';
+static const String loginScreen='/loginScreen';
+static const String signupScreen='/signupScreen';
 
 }
