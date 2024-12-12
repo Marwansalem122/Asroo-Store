@@ -65,7 +65,13 @@ class AsrooStoreApp extends StatelessWidget {
                     localeResolutionCallback:
                         AppLocalizationsSetup.localeResolutionCallback,
                     onGenerateRoute: appRouter.generateRoute,
-                    initialRoute: Routes.loginScreen,
+                    initialRoute: SharedPref()
+                                .getString(PrefKeys.accessToken) !=
+                            null
+                        ? SharedPref().getString(PrefKeys.userRole) != 'admin'
+                            ? Routes.homeCustomerScreen
+                            : Routes.homeAdminScreen
+                        : Routes.loginScreen,
                   );
                 },
               ),

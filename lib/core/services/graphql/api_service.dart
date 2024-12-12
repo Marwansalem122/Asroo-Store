@@ -1,4 +1,6 @@
 
+import 'package:asroo_store/features/auth/data/models/login_response.dart';
+import 'package:asroo_store/features/auth/data/models/user_role_response.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -11,13 +13,13 @@ const String graphql = '/graphql';
 abstract class ApiService {
   factory ApiService(Dio dio, {String baseUrl}) = _ApiService;
 
-  // @POST(graphql)
-  // Future<LoginResponse> login(
-    // @Body() Map<String, dynamic> mutation,
-  // );
+  @POST(graphql)
+  Future<LoginResponse> login(
+    @Body() Map<String, dynamic> mutation,
+  );
 
-  // @GET('/api/v1/auth/profile')
-  // Future<UserRoleResponse> userRole();
+  @GET('/api/v1/auth/profile')
+  Future<UserRoleResponse> userRole();
 
   // @POST('/api/v1/files/upload')
   // Future<UploadImageResourse> uploadImage(
