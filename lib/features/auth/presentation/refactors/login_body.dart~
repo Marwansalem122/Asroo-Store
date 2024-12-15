@@ -1,6 +1,5 @@
 import 'package:asroo_store/core/common/animations/animate_do.dart';
 import 'package:asroo_store/core/common/widgets/text_app.dart';
-import 'package:asroo_store/core/config/size_config.dart';
 import 'package:asroo_store/core/helper/extensions/context_extension.dart';
 import 'package:asroo_store/core/language/lang_keys.dart';
 import 'package:asroo_store/core/routes/routes.dart';
@@ -17,8 +16,6 @@ class LoginBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(SizeConfig.screenHeight);
-    print(SizeConfig.screenWidth);
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
       child: SingleChildScrollView(

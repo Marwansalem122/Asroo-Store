@@ -20,9 +20,9 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   final AuthRepos _repo;
 
-  TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
 
   final formKey = GlobalKey<FormState>();
 
