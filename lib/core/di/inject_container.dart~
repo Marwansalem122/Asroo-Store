@@ -1,6 +1,5 @@
 import 'package:asroo_store/core/app/app_cubit/app_cubit.dart';
 import 'package:asroo_store/core/app/upload_image/cubit/upload_image_cubit.dart';
-import 'package:asroo_store/core/app/upload_image/data_source/upload_image_data_source.dart';
 import 'package:asroo_store/core/app/upload_image/repo/upload_image_repo.dart';
 import 'package:asroo_store/core/services/graphql/api_service.dart';
 import 'package:asroo_store/core/services/graphql/dio_factory.dart';
@@ -25,8 +24,7 @@ Future<void> _initCore() async {
    ..registerFactory<ApiService>(()=>ApiService(dio))
   ..registerSingleton<GlobalKey<NavigatorState>>(navigatorKey)
      ..registerFactory(() => UploadImageCubit(sl()))
-     ..registerFactory(() => UploadImageRepo(sl()))
-     ..registerFactory(() => UploadImageDataSource(sl()));
+     ..registerFactory(() => UploadImageRepo(sl()));
 }
 Future<void> _initAuth() async {
   sl

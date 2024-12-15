@@ -48,7 +48,7 @@ class _LoginTextFormState extends State<SignUpTextForm> {
               keyboardType: TextInputType.text,
               validator: (value) {
                 print("${value}=============================");
-                if (value==null||value.isEmpty||value.length<4) {
+                if (value==null||value.isNotEmpty||value.length<4) {
                   return context.translate(LangKeys.validName);
                 }
                 return null;

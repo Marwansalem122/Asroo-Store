@@ -63,8 +63,8 @@ class UserAvator extends StatelessWidget {
                       // remove image
                       if (isImageUploaded)
                         Positioned(
-                          // bottom: -5,
-                          // right: -8,
+                          bottom: -5,
+                          right: -8,
                           top:-15,
                           right: -15,
                           child: IconButton(
