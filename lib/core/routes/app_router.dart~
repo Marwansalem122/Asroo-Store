@@ -4,6 +4,7 @@ import 'package:asroo_store/core/di/inject_container.dart';
 import 'package:asroo_store/core/routes/base_routes.dart';
 import 'package:asroo_store/core/routes/routes.dart';
 import 'package:asroo_store/features/admin/home_admin/representation/screens/home_admin.dart';
+import 'package:asroo_store/features/admin/representation/screens/home_admin.dart';
 import 'package:asroo_store/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:asroo_store/features/auth/presentation/screens/login_screen.dart';
 import 'package:asroo_store/features/auth/presentation/screens/sign_up_screen.dart';
@@ -28,6 +29,7 @@ class AppRouter {
         return BaseRoute(page: MultiBlocProvider(
           providers: [
              BlocProvider(create: (context) => sl<AuthBloc>()),
+            // BlocProvider(create: (context) => sl<AuthBloc>()),
             BlocProvider(create: (context) => sl<UploadImageCubit>()),
           ],
           child: const SignUpScreen(),
