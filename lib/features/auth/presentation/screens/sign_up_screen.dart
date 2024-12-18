@@ -12,7 +12,7 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CustomPaint(
-        size: Size(SizeConfig.screenWidth!, 150.h),
+        size: Size(SizeConfig.screenWidth!,SizeConfig.screenHeight! * 0.141),
         painter: AuthCustomPainter(
           gradient: LinearGradient(
             colors: [

@@ -1,8 +1,9 @@
+import 'package:asroo_store/core/app/upload_image/cubit/upload_image_cubit.dart';
 import 'package:asroo_store/core/common/screens/under_build_screen.dart';
 import 'package:asroo_store/core/di/inject_container.dart';
 import 'package:asroo_store/core/routes/base_routes.dart';
 import 'package:asroo_store/core/routes/routes.dart';
-import 'package:asroo_store/features/admin/representation/screens/home_admin.dart';
+import 'package:asroo_store/features/admin/home_admin/representation/screens/home_admin_screen.dart';
 import 'package:asroo_store/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:asroo_store/features/auth/presentation/screens/login_screen.dart';
 import 'package:asroo_store/features/auth/presentation/screens/sign_up_screen.dart';
@@ -24,7 +25,13 @@ class AppRouter {
           ),
         );
       case Routes.signupScreen:
-        return BaseRoute(page: const SignUpScreen());
+        return BaseRoute(page: MultiBlocProvider(
+          providers: [
+             BlocProvider(create: (context) => sl<AuthBloc>()),
+            BlocProvider(create: (context) => sl<UploadImageCubit>()),
+          ],
+          child: const SignUpScreen(),
+        ),);
       case Routes.homeAdminScreen:
         return BaseRoute(page: const HomeAdminScreen());
       case Routes.homeCustomerScreen:

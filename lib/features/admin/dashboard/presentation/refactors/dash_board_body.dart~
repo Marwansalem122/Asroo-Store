@@ -1,0 +1,59 @@
+import 'package:asroo_store/core/style/images/app_images.dart';
+import 'package:asroo_store/features/admin/dashboard/presentation/bloc/categories_number/categories_number_bloc.dart';
+import 'package:asroo_store/features/admin/dashboard/presentation/bloc/products_number/products_number_bloc.dart';
+import 'package:asroo_store/features/admin/dashboard/presentation/bloc/users_number/users_number_bloc.dart';
+import 'package:asroo_store/features/admin/dashboard/presentation/widgets/dashboard_container.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class DashBoardBody extends StatelessWidget {
+  const DashBoardBody({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Padding(
+      padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 20.h),
+      child: RefreshIndicator(
+        onRefresh: () async{
+          context
+              .read<ProductsNumberBloc>()
+              .add(const ProductsNumberEvent.getProductsNumber());
+          context
+              .read<CategoriesNumberBloc>()
+              .add(const CategoriesNumberEvent.getCategoriesNumber());
+          context
+              .read<UsersNumberBloc>()
+              .add(const UsersNumberEvent.getUsersNumber());
+        },
+        child: ListView(
+
+          children:  [
+          // Products
+            DashBoardContiner(
+                title: "Products",
+                number: "5",
+                image: AppImages.productsDrawer,
+                isLoading: false),
+            SizedBox(height: 20.h),
+            // Categories
+            DashBoardContiner(
+                title: "Categories",
+                number: "5",
+                image: AppImages.productsDrawer,
+                isLoading: false),
+            SizedBox(height: 20.h),
+            // Products
+            DashBoardContiner(
+                title: "Products",
+                number: "5",
+                image: AppImages.productsDrawer,
+                isLoading: false),
+
+
+          ],
+        ),
+      ),
+    );
+  }
+}

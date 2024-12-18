@@ -32,6 +32,7 @@ class AsrooStoreApp extends StatelessWidget {
               designSize: const Size(390, 844),
               minTextAdapt: true,
               splitScreenMode: true,
+
               child: BlocBuilder<AppCubit, AppState>(
                 buildWhen: (previousState, currState) =>
                     previousState != currState,
@@ -64,8 +65,11 @@ class AsrooStoreApp extends StatelessWidget {
                     supportedLocales: AppLocalizationsSetup.supportedLocales,
                     localeResolutionCallback:
                         AppLocalizationsSetup.localeResolutionCallback,
+                    navigatorKey: sl<GlobalKey<NavigatorState>>(),
                     onGenerateRoute: appRouter.generateRoute,
-                    initialRoute: SharedPref()
+                    initialRoute:
+                    // Routes.loginScreen
+                    SharedPref()
                                 .getString(PrefKeys.accessToken) !=
                             null
                         ? SharedPref().getString(PrefKeys.userRole) != 'admin'

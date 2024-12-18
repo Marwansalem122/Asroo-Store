@@ -32,11 +32,11 @@ class SignupBody extends StatelessWidget {
             SizedBox(height: 10.h),
             //user Avatar image
             const UserAvator(),
-            SizedBox(height: 30.h),
+            SizedBox(height: 25.h),
             const SignUpTextForm(),
-            SizedBox(height: 20.h),
+            SizedBox(height: 10.h),
             const SignUpButton(),
-            SizedBox(height: 20.h),
+            SizedBox(height: 5.h),
 
             //Go to signup screen
             CustomFadeInDown(

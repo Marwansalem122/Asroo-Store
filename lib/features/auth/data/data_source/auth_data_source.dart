@@ -3,6 +3,8 @@ import 'package:asroo_store/core/services/graphql/graphql_query/auth/auth_querie
 import 'package:asroo_store/core/utils/app_strings.dart';
 import 'package:asroo_store/features/auth/data/models/login_request_body.dart';
 import 'package:asroo_store/features/auth/data/models/login_response.dart';
+import 'package:asroo_store/features/auth/data/models/sign_up_request_body.dart';
+import 'package:asroo_store/features/auth/data/models/sign_up_response.dart';
 import 'package:asroo_store/features/auth/data/models/user_role_response.dart';
 // import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dio/dio.dart';
@@ -13,7 +15,7 @@ class AuthDataSource {
 
   final ApiService _graphql;
 
-  //Login
+//Login
   Future<LoginResponse> login({required LoginRequestBody body}) async {
     final response =
         await _graphql.login(AuthQueries().loginMapQuery(body: body));
@@ -31,17 +33,17 @@ class AuthDataSource {
   }
 
   //SignUp
-  // Future<SignUpResponse> signUp({required SignUpRequestBody body}) async {
-    // final response =
-        // await _graphql.signUp(AuthQueries().signUpMapQuery(body: body));
-    // return response;
-  // }
+  Future<SignUpResponse> signUp({required SignUpRequestBody body}) async {
+    final response =
+        await _graphql.signUp(AuthQueries().signUpMapQuery(body: body));
+    return response;
+  }
 
-  // add user id in firebase to used with notfication data base
+  //add user id in firebase to used with notfication data base
   // Future<void> addUserIdFirebase({required String userId}) async {
-    // await FirebaseFirestore.instance
-        // .collection(usersCollection)
-        // .doc(userId)
-        // .set({});
+  //   await FirebaseFirestore.instance
+  //       .collection(usersCollection)
+  //       .doc(userId)
+  //       .set({});
   // }
 }

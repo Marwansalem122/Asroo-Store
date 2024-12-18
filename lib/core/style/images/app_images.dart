@@ -10,6 +10,7 @@ class AppImages {
   static const String pageUnderBuild = '$imagePath/page_under_build$jpgFormate';
   static const String darkTestImage = '$imagePath/dark_test_image$pngFormate';
   static const String lightTestImage = '$imagePath/light_test_image$pngFormate';
+  static const String emptyImage = '$imagePath/empty_screen$pngFormate';
 
 
     // Customer
