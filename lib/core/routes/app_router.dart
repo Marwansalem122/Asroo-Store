@@ -15,7 +15,7 @@ class AppRouter {
   // ignore: strict_raw_type
   Route generateRoute(RouteSettings settings) {
     //  this arguments to be passed in any screen  like this (arguments & className)
-    final argument = settings.arguments;
+   // final argument = settings.arguments;
     switch (settings.name) {
       case Routes.loginScreen:
         return BaseRoute(
