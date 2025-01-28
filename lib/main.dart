@@ -15,7 +15,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  await EnvVariables.instance.init(envType: EnvTypeEnum.dev);
+  await EnvVariable.instance.init(envType: EnvTypeEnum.dev);
   await SharedPref().instantiatePreferences();
 await setupInject();
   Bloc.observer = AppBlocObserver();

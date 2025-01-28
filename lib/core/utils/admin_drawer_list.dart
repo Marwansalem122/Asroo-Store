@@ -10,7 +10,7 @@ import 'package:asroo_store/features/admin/add_categories/presentation/screens/a
 import 'package:asroo_store/features/admin/add_notifications/presentation/screens/add_notifications_screen.dart';
 import 'package:asroo_store/features/admin/add_products/presentation/screens/add_products_screen.dart';
 import 'package:asroo_store/features/admin/dashboard/presentation/screens/dash_board_screen.dart';
-import 'package:asroo_store/features/admin/users/presentation/screens/user_screen.dart';
+import 'package:asroo_store/features/admin/users/presentation/screens/users_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

@@ -8,6 +8,7 @@ import 'package:asroo_store/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:asroo_store/features/auth/presentation/screens/login_screen.dart';
 import 'package:asroo_store/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:asroo_store/features/customer/presentation/screens/home_customer.dart';
+import 'package:asroo_store/features/customer/product_details/presentation/screen/product_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -34,6 +35,12 @@ class AppRouter {
         ),);
       case Routes.homeAdminScreen:
         return BaseRoute(page: const HomeAdminScreen());
+         case Routes.productDetailsScreen:
+        return BaseRoute(
+          page: ProductDetailsScreen(
+            productId: settings.arguments! as int,
+          ),
+        );
       case Routes.homeCustomerScreen:
         return BaseRoute(page: const HomeCustomerScreen());
       default:

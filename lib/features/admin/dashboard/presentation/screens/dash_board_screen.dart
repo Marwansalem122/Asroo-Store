@@ -28,7 +28,9 @@ class DashBoardScreen extends StatelessWidget {
       ],
      child:  Scaffold(
     appBar: AppBar(
-    title:const Text("DashBoardScreen"),
+  automaticallyImplyLeading: false,
+  centerTitle: true,
+    title:const Text('DashBoard Screen'),
     ),
     body: const DashBoardBody(),
     ),

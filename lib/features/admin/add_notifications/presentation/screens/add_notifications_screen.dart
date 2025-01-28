@@ -9,10 +9,17 @@ class AddNotificationsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-           'Add Notifications',
+          'Add Notifications',
         ),
       ),
-
+      body: Center(
+        child: Column(
+          children: [
+            TextButton(
+                onPressed: () {}, child: const Text('Send Notification')),
+          ],
+        ),
+      ),
     );
   }
 }

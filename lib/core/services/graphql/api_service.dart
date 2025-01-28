@@ -5,6 +5,7 @@ import 'package:asroo_store/features/admin/add_products/data/models/get_all_prod
 import 'package:asroo_store/features/admin/dashboard/data/models/categories_number_response.dart';
 import 'package:asroo_store/features/admin/dashboard/data/models/porducts_number_response.dart';
 import 'package:asroo_store/features/admin/dashboard/data/models/users_number_response.dart';
+import 'package:asroo_store/features/admin/users/data/models/get_all_users_response.dart';
 import 'package:asroo_store/features/auth/data/models/login_response.dart';
 import 'package:asroo_store/features/auth/data/models/sign_up_response.dart';
 import 'package:asroo_store/features/auth/data/models/user_role_response.dart';
@@ -93,10 +94,10 @@ abstract class ApiService {
     @Body() Map<String, dynamic> mutation,
   );
 
-  // @POST(graphql)
-  // Future<GetAllUsersResponse> getAllUsers(
-    // @Body() Map<String, dynamic> query,
-  // );
+  @POST(graphql)
+  Future<GetAllUsersResponse> getAllUsers(
+    @Body() Map<String, dynamic> query,
+  );
 
   @POST(graphql)
   Future<void> deleteUser(
@@ -127,4 +128,5 @@ abstract class ApiService {
   Future<GetAllProductResponse> searchProduct(
     @Body() Map<String, dynamic> query,
   );
+
 }
